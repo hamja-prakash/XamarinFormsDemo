@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Grid
+    x:Class="XamarinNativeDemo.Helper.ScratchView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+    xmlns:tt="clr-namespace:TouchTracking.Forms;assembly=TouchTracking.Forms">
+    <Image
+        x:Name="BackImage"
+        Grid.Row="0"
+        Grid.Column="0"
+        Aspect="Fill" />
+
+    <skia:SKCanvasView
+        x:Name="canvasView"
+        Grid.Row="0"
+        Grid.Column="0"
+        PaintSurface="CanvasView_PaintSurface"
+        VerticalOptions="Fill" />
+    <Grid.Effects>
+        <tt:TouchEffect Capture="True" TouchAction="TouchEffect_TouchAction" />
+    </Grid.Effects>
+</Grid>

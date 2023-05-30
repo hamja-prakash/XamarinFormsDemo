@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinNativeDemo.Views.Menu.MenuPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Frame
+                    Grid.RowSpan="2"
+                    Margin="0"
+                    Padding="0"
+                    BackgroundColor="#F2F3F4"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand" />
+
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Vertical"
+                    Spacing="5"
+                    VerticalOptions="FillAndExpand">
+                    <Frame
+                        Grid.Row="0"
+                        Margin="0,20,0,0"
+                        Padding="0"
+                        BorderColor="White"
+                        CornerRadius="75"
+                        HasShadow="False"
+                        HeightRequest="150"
+                        HorizontalOptions="CenterAndExpand"
+                        IsClippedToBounds="True"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="150">
+                        <Image Aspect="AspectFill" Source="img1.jpg" />
+                    </Frame>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalTextAlignment="center"
+                        Text="Welcome Alex"
+                        TextColor="Black"
+                        VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+
+                <Grid
+                    x:Name="grdMain"
+                    Grid.Row="1"
+                    Margin="0,20"
+                    Padding="0"
+                    HorizontalOptions="FillAndExpand"
+                    RowSpacing="0"
+                    VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Frame
+                        x:Name="frmHome"
+                        Grid.Row="0"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HasShadow="False"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <StackLayout
+                            Margin="20,5"
+                            Padding="0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="20"
+                            VerticalOptions="FillAndExpand">
+                            <Image
+                                x:Name="imgHome"
+                                Aspect="AspectFit"
+                                HeightRequest="30"
+                                Source="iconHome.png"
+                                WidthRequest="30" />
+                            <Label
+                                x:Name="lblHome"
+                                FontSize="20"
+                                Text="Home"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmHome_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="Gray"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <Frame
+                        x:Name="FrmAbout"
+                        Grid.Row="2"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HasShadow="False"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <StackLayout
+                            Grid.Row="2"
+                            Margin="20,5"
+                            Padding="0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="20"
+                            VerticalOptions="FillAndExpand">
+                            <Image
+                                x:Name="imgAbout"
+                                Aspect="AspectFit"
+                                HeightRequest="30"
+                                Source="iconAbout.png"
+                                WidthRequest="30" />
+                            <Label
+                                x:Name="lblAbout"
+                                FontSize="20"
+                                Text="About Us"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmAbout_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <BoxView
+                        Grid.Row="3"
+                        BackgroundColor="Gray"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <Frame
+                        x:Name="frmUsers"
+                        Grid.Row="4"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HasShadow="False"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <StackLayout
+                            Margin="20,5"
+                            Padding="0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="20"
+                            VerticalOptions="FillAndExpand">
+                            <Image
+                                x:Name="imgUsers"
+                                Aspect="AspectFit"
+                                HeightRequest="30"
+                                Source="iconBlackUser.png"
+                                WidthRequest="30" />
+                            <Label
+                                x:Name="lblUsers"
+                                FontSize="20"
+                                Text="Users"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmUsers_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <BoxView
+                        Grid.Row="5"
+                        BackgroundColor="Gray"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <Frame
+                        x:Name="frmProducts"
+                        Grid.Row="6"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HasShadow="False"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <StackLayout
+                            Margin="20,5"
+                            Padding="0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="20"
+                            VerticalOptions="FillAndExpand">
+                            <Image
+                                x:Name="imgProducts"
+                                Aspect="AspectFit"
+                                HeightRequest="30"
+                                Source="iconProduct.png"
+                                WidthRequest="30" />
+                            <Label
+                                x:Name="lblProducts"
+                                FontSize="20"
+                                Text="Product"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmProducts_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <BoxView
+                        Grid.Row="7"
+                        BackgroundColor="Gray"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+
+                    <Frame
+                        x:Name="FrmStatusBG"
+                        Grid.Row="8"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HasShadow="False"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <StackLayout
+                            Margin="20,5"
+                            Padding="0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="20"
+                            VerticalOptions="FillAndExpand">
+                            <Image
+                                x:Name="imgStatusbar"
+                                Aspect="AspectFit"
+                                HeightRequest="30"
+                                Source="iconProduct.png"
+                                WidthRequest="30" />
+                            <Label
+                                x:Name="lblStatusbar"
+                                FontSize="20"
+                                Text="Statusbar"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmStatusBG_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <BoxView
+                        Grid.Row="9"
+                        BackgroundColor="Gray"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <Frame
+                        x:Name="frmCardScan"
+                        Grid.Row="10"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HasShadow="False"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <StackLayout
+                            Margin="20,5"
+                            Padding="0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="20"
+                            VerticalOptions="FillAndExpand">
+                            <Image
+                                x:Name="imgCardScan"
+                                Aspect="AspectFit"
+                                HeightRequest="30"
+                                Source="iconProduct.png"
+                                WidthRequest="30" />
+                            <Label
+                                x:Name="lblCardScan"
+                                FontSize="20"
+                                Text="Card Scan"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmCardScan_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <BoxView
+                        Grid.Row="11"
+                        BackgroundColor="Gray"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <Frame
+                        x:Name="frmScartchView"
+                        Grid.Row="12"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HasShadow="False"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <StackLayout
+                            Margin="20,5"
+                            Padding="0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="20"
+                            VerticalOptions="FillAndExpand">
+                            <Image
+                                x:Name="imgScratchView"
+                                Aspect="AspectFit"
+                                HeightRequest="30"
+                                Source="iconHome.png"
+                                WidthRequest="30" />
+                            <Label
+                                x:Name="lblScratchView"
+                                FontSize="20"
+                                Text="ScartchView"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmScratchView_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <BoxView
+                        Grid.Row="13"
+                        BackgroundColor="Gray"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <Frame
+                        x:Name="frmContactShare"
+                        Grid.Row="14"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HasShadow="False"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <StackLayout
+                            Margin="20,5"
+                            Padding="0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="20"
+                            VerticalOptions="FillAndExpand">
+                            <Image
+                                x:Name="imgContactShare"
+                                Aspect="AspectFit"
+                                HeightRequest="30"
+                                Source="iconHome.png"
+                                WidthRequest="30" />
+                            <Label
+                                x:Name="lblContactShare"
+                                FontSize="20"
+                                Text="ContactShare"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmContactShare_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <BoxView
+                        Grid.Row="15"
+                        BackgroundColor="Gray"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <Frame
+                        x:Name="frmTwoCardAnm"
+                        Grid.Row="16"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HasShadow="False"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <StackLayout
+                            Margin="20,5"
+                            Padding="0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="20"
+                            VerticalOptions="FillAndExpand">
+                            <Image
+                                x:Name="imgTwoCardAnm"
+                                Aspect="AspectFit"
+                                HeightRequest="30"
+                                Source="iconAbout.png"
+                                WidthRequest="30" />
+                            <Label
+                                x:Name="lblTwoCardAnm"
+                                FontSize="20"
+                                Text="Two Card Animation"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmTwoCardAnm_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <BoxView
+                        Grid.Row="17"
+                        BackgroundColor="Gray"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <Frame
+                        x:Name="frmCustomSlider"
+                        Grid.Row="18"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HasShadow="False"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <StackLayout
+                            Margin="20,5"
+                            Padding="0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="20"
+                            VerticalOptions="FillAndExpand">
+                            <Image
+                                x:Name="imgCustomSlider"
+                                Aspect="AspectFit"
+                                HeightRequest="30"
+                                Source="iconAbout.png"
+                                WidthRequest="30" />
+                            <Label
+                                x:Name="lblCustomSlider"
+                                FontSize="20"
+                                Text="Custom Slider"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmCustomSlider_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <BoxView
+                        Grid.Row="19"
+                        BackgroundColor="Gray"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <Frame
+                        x:Name="frmCustomEntVal"
+                        Grid.Row="20"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HasShadow="False"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        IsVisible="false"
+                        VerticalOptions="FillAndExpand">
+                        <StackLayout
+                            Margin="20,5"
+                            Padding="0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="20"
+                            VerticalOptions="FillAndExpand">
+                            <Image
+                                x:Name="imgCustomEntVal"
+                                Aspect="AspectFit"
+                                HeightRequest="30"
+                                Source="iconAbout.png"
+                                WidthRequest="30" />
+                            <Label
+                                x:Name="lblCustomEntVal"
+                                FontSize="20"
+                                Text="Custom Entry Validation"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmCustomEntVal_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <BoxView
+                        Grid.Row="21"
+                        BackgroundColor="Gray"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <Frame
+                        x:Name="frmCstUIwithKeyboard"
+                        Grid.Row="22"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HasShadow="False"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <StackLayout
+                            Margin="20,5"
+                            Padding="0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="20"
+                            VerticalOptions="FillAndExpand">
+                            <Image
+                                x:Name="imgCstUIwithKeyboard"
+                                Aspect="AspectFit"
+                                HeightRequest="30"
+                                Source="iconAbout.png"
+                                WidthRequest="30" />
+                            <Label
+                                x:Name="lblCstUIwithKeyboard"
+                                FontSize="20"
+                                Text="Customize UI with Keyboard"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="frmCstUIwithKeyboard_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <BoxView
+                        Grid.Row="23"
+                        BackgroundColor="Gray"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+
+                    <Frame
+                        x:Name="frmEventWithTimer"
+                        Grid.Row="24"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HasShadow="False"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <StackLayout
+                            Margin="20,5"
+                            Padding="0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="20"
+                            VerticalOptions="FillAndExpand">
+                            <Image
+                                x:Name="imgEventWithTimer"
+                                Aspect="AspectFit"
+                                HeightRequest="30"
+                                Source="iconAbout.png"
+                                WidthRequest="30" />
+                            <Label
+                                x:Name="lblEventWithTimer"
+                                FontSize="20"
+                                Text="Event With Timer"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="frmEventWithTimer_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

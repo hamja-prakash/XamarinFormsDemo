@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinNativeDemo.Views.PermissionPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:viewmodels="clr-namespace:XamarinNativeDemo.ViewModels"
+    ios:Page.UseSafeArea="true"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False">
+    <StackLayout Margin="0,20,0,0">
+        <CollectionView ItemsSource="{Binding PermissionsList}" SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10" RowSpacing="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.RowSpan="2"
+                            Aspect="AspectFill"
+                            HeightRequest="50"
+                            Source="{Binding Icon}"
+                            WidthRequest="50" />
+
+                        <Label
+                            Grid.Column="1"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            Text="{Binding Name}"
+                            VerticalOptions="End" />
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            FontAttributes="Italic"
+                            Text="{Binding Description}"
+                            VerticalOptions="Start" />
+
+                        <CheckBox
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Grid.Column="2"
+                            IsChecked="{Binding IsGranted, Mode=TwoWay}"
+                            Color="#6C8AAE" />
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewmodels:PermissionPageViewModel}}, Path=OnSelectPermissionChangeCommand}" CommandParameter="{Binding .}" />
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button
+            BackgroundColor="#6C8AAE"
+            Command="{Binding GoHomeCommand}"
+            CornerRadius="0"
+            FontSize="20"
+            Text="Next"
+            TextColor="#F9E0A9" />
+    </StackLayout>
+</ContentPage>

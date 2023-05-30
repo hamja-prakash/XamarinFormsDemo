@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinNativeDemo.Views.SinglePermissionPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="30" Spacing="30">
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="200"
+                    HorizontalOptions="FillAndExpand"
+                    Source="Camera.png"
+                    VerticalOptions="CenterAndExpand" />
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    Text="Camera permission needed"
+                    TextColor="#3C2820" />
+
+                <Label
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    Text="This app needs access to your cam, which is required for Augmented reality. If you don't feel comfortable with this permission, you can go to settings and modify it at any time."
+                    TextColor="#3C2820" />
+
+                <Button
+                    Margin="10,0"
+                    BackgroundColor="#EE7E4C"
+                    Command="{Binding GoHomeCommand}"
+                    CornerRadius="20"
+                    FontSize="20"
+                    Text="Turn on"
+                    TextColor="White"
+                    VerticalOptions="EndAndExpand" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

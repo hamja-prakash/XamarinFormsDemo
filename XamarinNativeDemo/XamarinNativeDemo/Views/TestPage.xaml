@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinNativeDemo.Views.TestPage">
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="0" Padding="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Frame BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="0" Padding="0">
+                <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="0" Padding="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="60"/>
+                    </Grid.ColumnDefinitions>
+                    <ImageButton BackgroundColor="Transparent" Clicked="ImageButton_Clicked" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10,0" HeightRequest="30" WidthRequest="30" Source="menu.png"/>
+                    <Label Grid.Column="1" FontAttributes="Bold" FontSize="20" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  TextColor="Black" Text="About"/>
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

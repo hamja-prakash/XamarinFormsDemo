@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="XamarinNativeDemo.Views.AboutUsView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentView.Content>
+        <ScrollView
+            HorizontalOptions="FillAndExpand"
+            HorizontalScrollBarVisibility="Never"
+            VerticalOptions="FillAndExpand"
+            VerticalScrollBarVisibility="Never">
+
+            <StackLayout Orientation="Vertical" Spacing="10">
+                <CarouselView
+                    x:Name="carslDogs"
+                    HeightRequest="200"
+                    HorizontalOptions="FillAndExpand"
+                    IndicatorView="indicatorView"
+                    VerticalOptions="FillAndExpand">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame
+                                Margin="0"
+                                Padding="0"
+                                CornerRadius="10"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+                                <Image
+                                    Margin="0"
+                                    Aspect="AspectFill"
+                                    HorizontalOptions="FillAndExpand"
+                                    Source="{Binding .}"
+                                    VerticalOptions="FillAndExpand" />
+                            </Frame>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+                <IndicatorView
+                    x:Name="indicatorView"
+                    Margin="0"
+                    HorizontalOptions="Center"
+                    IndicatorColor="LightGray"
+                    IndicatorSize="10"
+                    SelectedIndicatorColor="#0A7EF1" />
+                <Label
+                    FontSize="14"
+                    Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                    TextColor="Black" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

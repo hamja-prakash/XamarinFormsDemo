@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinNativeDemo.Views.ChangeStatusbarBGPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Frame
+                x:Name="FrmShowStatusbar"
+                Grid.Row="1"
+                Margin="10"
+                Padding="10,0"
+                BackgroundColor="#0A7EF1"
+                CornerRadius="10"
+                HasShadow="false"
+                HeightRequest="40"
+                HorizontalOptions="EndAndExpand">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="14"
+                    HorizontalTextAlignment="Center"
+                    Text="Show Statusbar"
+                    TextColor="white"
+                    VerticalTextAlignment="Center" />
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmShowStatusbar_Tapped" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Frame
+                x:Name="FrmHideStatusbar"
+                Grid.Row="1"
+                Margin="10"
+                Padding="10,0"
+                BackgroundColor="#0A7EF1"
+                CornerRadius="10"
+                HasShadow="false"
+                HeightRequest="40"
+                HorizontalOptions="EndAndExpand">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="14"
+                    HorizontalTextAlignment="Center"
+                    Text="Hide Statusbar"
+                    TextColor="white"
+                    VerticalTextAlignment="Center" />
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmHideStatusbar_Tapped" />
+                </Frame.GestureRecognizers>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

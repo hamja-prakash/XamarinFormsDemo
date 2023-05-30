@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinNativeDemo.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
+    xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
+    xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS">
+
+    <!--<StackLayout Margin="20">
+        <ios:UILabel Text="Hello World" TextColor="{x:Static ios:UIColor.Red}" View.HorizontalOptions="Start" />
+        <androidWidget:TextView Text="Hello World" x:Arguments="{x:Static androidLocal:MainActivity.Instance}" />
+    </StackLayout>-->
+
+    <RelativeLayout Margin="20">
+        <BoxView
+            RelativeLayout.HeightConstraint="5"
+            RelativeLayout.WidthConstraint="200"
+            RelativeLayout.XConstraint="0"
+            RelativeLayout.YConstraint="10"
+            Color="Silver" />
+        <BoxView
+            RelativeLayout.HeightConstraint="5"
+            RelativeLayout.WidthConstraint="200"
+            RelativeLayout.XConstraint="0"
+            RelativeLayout.YConstraint="20"
+            Color="Silver" />
+        <BoxView
+            RelativeLayout.HeightConstraint="65"
+            RelativeLayout.WidthConstraint="5"
+            RelativeLayout.XConstraint="10"
+            RelativeLayout.YConstraint="0"
+            Color="Silver" />
+        <BoxView
+            RelativeLayout.HeightConstraint="65"
+            RelativeLayout.WidthConstraint="5"
+            RelativeLayout.XConstraint="20"
+            RelativeLayout.YConstraint="0"
+            Color="Silver" />
+        <Label
+            FontSize="24"
+            RelativeLayout.XConstraint="30"
+            RelativeLayout.YConstraint="25"
+            Text="Stylish header" />
+    </RelativeLayout>
+
+
+    <!--<RelativeLayout>
+        <BoxView Color="Red"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}" />
+        <BoxView Color="Green"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=-40}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}" />
+        <BoxView Color="Blue"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=-40}" />
+        <BoxView Color="Yellow"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=-40}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=-40}" />
+
+    -->
+    <!--  Centered and 1/3 width and height of parent  -->
+    <!--
+        <BoxView x:Name="oneThird"
+                 Color="Silver"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.33}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.33}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.33}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.33}" />
+
+    -->
+    <!--  1/3 width and height of previous  -->
+    <!--
+        <BoxView Color="Black"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=oneThird, Property=X}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=oneThird, Property=Y}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=oneThird, Property=Width, Factor=0.33}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=oneThird, Property=Height, Factor=0.33}" />
+    </RelativeLayout>-->
+</ContentPage>

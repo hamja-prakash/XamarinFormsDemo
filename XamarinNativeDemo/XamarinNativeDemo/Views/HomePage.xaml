@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinNativeDemo.Views.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid
+            Margin="0"
+            Padding="0"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="0"
+            VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Frame
+                Margin="0"
+                Padding="0"
+                BackgroundColor="#0A7EF1"
+                CornerRadius="0"
+                HasShadow="False"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Grid
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="60" />
+                    </Grid.ColumnDefinitions>
+                    <ImageButton
+                        x:Name="imgMenu"
+                        Margin="10,0"
+                        BackgroundColor="Transparent"
+                        Clicked="ImageButton_Clicked"
+                        HeightRequest="30"
+                        HorizontalOptions="FillAndExpand"
+                        Source="iconWhiteMenu.png"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="30" />
+                    <Label
+                        x:Name="lblHeader"
+                        Grid.Column="1"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="Home"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        VerticalTextAlignment="Center" />
+                </Grid>
+            </Frame>
+
+            <Grid
+                x:Name="grdMain"
+                Grid.Row="1"
+                Margin="20,10"
+                Padding="0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand" />
+
+            <Grid
+                Grid.Row="2"
+                Margin="0"
+                Padding="0"
+                BackgroundColor="LightGray"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <BoxView
+                    Grid.Row="0"
+                    BackgroundColor="LightGray"
+                    HeightRequest="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand" />
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout
+                        Grid.Column="0"
+                        Margin="0"
+                        Padding="0"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Vertical"
+                        Spacing="5"
+                        VerticalOptions="FillAndExpand">
+                        <Image
+                            x:Name="imgHome"
+                            Aspect="AspectFit"
+                            HeightRequest="30"
+                            Source="iconWhiteHome.png"
+                            WidthRequest="30" />
+                        <Label
+                            x:Name="lblHome"
+                            Grid.Column="1"
+                            FontSize="16"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Text="Home"
+                            TextColor="#0A7EF1"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="stkHome_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <BoxView
+                        Grid.Column="0"
+                        Margin="0,0,0,10"
+                        BackgroundColor="gray"
+                        HeightRequest="20"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="2" />
+
+                    <StackLayout
+                        Grid.Column="1"
+                        Margin="0"
+                        Padding="0"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Vertical"
+                        Spacing="5"
+                        VerticalOptions="FillAndExpand">
+                        <Image
+                            x:Name="imgAbout"
+                            Aspect="AspectFit"
+                            HeightRequest="30"
+                            Source="iconAbout.png"
+                            WidthRequest="30" />
+                        <Label
+                            x:Name="lblAbout"
+                            Grid.Column="1"
+                            FontSize="16"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Text="About Us"
+                            TextColor="Black"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="stkAbout_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <BoxView
+                        Grid.Column="1"
+                        Margin="0,0,0,10"
+                        BackgroundColor="gray"
+                        HeightRequest="20"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="2" />
+
+                    <StackLayout
+                        Grid.Column="2"
+                        Margin="0"
+                        Padding="0"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Vertical"
+                        Spacing="5"
+                        VerticalOptions="FillAndExpand">
+                        <Image
+                            x:Name="imgUser"
+                            Aspect="AspectFit"
+                            HeightRequest="30"
+                            Source="iconBlackUser.png"
+                            WidthRequest="30" />
+                        <Label
+                            x:Name="lblUser"
+                            Grid.Column="1"
+                            FontSize="16"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Text="Users"
+                            TextColor="Black"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="stkTest_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <BoxView
+                        Grid.Column="2"
+                        Margin="0,0,0,10"
+                        BackgroundColor="gray"
+                        HeightRequest="20"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="2" />
+
+                    <StackLayout
+                        Grid.Column="3"
+                        Margin="0"
+                        Padding="0"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Vertical"
+                        Spacing="5"
+                        VerticalOptions="FillAndExpand">
+                        <Image
+                            Aspect="AspectFit"
+                            HeightRequest="30"
+                            Source="iconAbout.png"
+                            WidthRequest="30" />
+                        <Label
+                            Grid.Column="1"
+                            FontSize="16"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Text="Test1"
+                            TextColor="Black"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="stkTest1_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

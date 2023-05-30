@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="XamarinNativeDemo.Views.AddProductView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#A2ffffff">
+    <ContentView.Content>
+        <Grid
+            Margin="0"
+            Padding="0"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Frame
+                Margin="0"
+                Padding="0"
+                BackgroundColor="#0A7EF1"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Grid
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="60" />
+                    </Grid.ColumnDefinitions>
+                    <ImageButton
+                        x:Name="imgBackBtn"
+                        Margin="10,0"
+                        BackgroundColor="Transparent"
+                        Clicked="imgBackBtn_Clicked"
+                        HeightRequest="30"
+                        HorizontalOptions="FillAndExpand"
+                        Source="iconBackBtn.png"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="30" />
+                    <Label
+                        x:Name="lblHeader"
+                        Grid.Column="1"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="Add Product"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        VerticalTextAlignment="Center" />
+                </Grid>
+            </Frame>
+
+            <ScrollView Grid.Row="1">
+                <Grid
+                    Grid.Row="1"
+                    Margin="20"
+                    Padding="0"
+                    HorizontalOptions="FillAndExpand"
+                    RowSpacing="20"
+                    VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid
+                        Margin="0"
+                        Padding="0"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Frame
+                            Padding="0"
+                            CornerRadius="75"
+                            HeightRequest="150"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            WidthRequest="150">
+                            <Image
+                                x:Name="PhotoImage"
+                                Aspect="AspectFill"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand" />
+                        </Frame>
+
+                        <ImageButton
+                            Margin="-20,-10,0,0"
+                            Clicked="ImageEdit_Clicked"
+                            HeightRequest="30"
+                            HorizontalOptions="EndAndExpand"
+                            Source="iconCircleEdit.png"
+                            VerticalOptions="EndAndExpand"
+                            WidthRequest="30" />
+                    </Grid>
+
+                    <Frame
+                        Grid.Row="1"
+                        Margin="0"
+                        Padding="10,0"
+                        BorderColor="LightGray"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <Entry
+                            x:Name="txtTitle"
+                            FontSize="18"
+                            HorizontalOptions="FillAndExpand"
+                            Placeholder="Title"
+                            PlaceholderColor="Gray"
+                            TextColor="Black"
+                            VerticalOptions="FillAndExpand" />
+                    </Frame>
+
+                    <!--<Grid
+                        Grid.Row="2"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">-->
+                    <Frame
+                        Grid.Row="2"
+                        Margin="0"
+                        Padding="10,0"
+                        BorderColor="LightGray"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <Entry
+                            x:Name="txtPrice"
+                            FontSize="18"
+                            HorizontalOptions="FillAndExpand"
+                            Keyboard="Numeric"
+                            Placeholder="Price"
+                            PlaceholderColor="Gray"
+                            TextColor="Black"
+                            VerticalOptions="FillAndExpand" />
+                    </Frame>
+
+                    <!--<Label
+                            Margin="30,-10,5,0"
+                            Padding="10,0"
+                            BackgroundColor="White"
+                            FontAttributes="Bold"
+                            HorizontalOptions="StartAndExpand"
+                            Text="Price"
+                            VerticalOptions="StartAndExpand" />
+                    </Grid>-->
+
+                    <Frame
+                        Grid.Row="3"
+                        Margin="0"
+                        Padding="10,0"
+                        BorderColor="LightGray"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <Grid
+                            Margin="0"
+                            Padding="0"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="30" />
+                            </Grid.ColumnDefinitions>
+                            <Picker
+                                x:Name="pckCategory"
+                                Title="Select Category"
+                                FontSize="18"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Aspect="AspectFit"
+                                BackgroundColor="Transparent"
+                                Clicked="pckCategory_Clicked"
+                                HeightRequest="25"
+                                Source="iconDownArw.png"
+                                WidthRequest="25" />
+                        </Grid>
+
+                    </Frame>
+
+                    <Frame
+                        Grid.Row="4"
+                        Margin="0"
+                        Padding="10,0"
+                        BorderColor="LightGray"
+                        CornerRadius="10"
+                        HeightRequest="150"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <Editor
+                            x:Name="txtDescription"
+                            FontSize="18"
+                            HorizontalOptions="FillAndExpand"
+                            Placeholder="text here.."
+                            VerticalOptions="FillAndExpand" />
+                    </Frame>
+
+                    <Frame
+                        Grid.Row="5"
+                        Margin="0,0,0,20"
+                        Padding="10,0"
+                        BackgroundColor="#0A7EF1"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <Label
+                            FontSize="18"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="Save"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand" />
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="frmSave_Tapped" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

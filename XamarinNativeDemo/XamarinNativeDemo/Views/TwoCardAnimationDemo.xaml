@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinNativeDemo.Views.TwoCardAnimationDemo"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XamarinNativeDemo.Helper">
+    <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
+        <controls:TwoCardsAnimationControl>
+            <controls:TwoCardsAnimationControl.BackView>
+                <Image HeightRequest="200" Source="Licence1.png" />
+            </controls:TwoCardsAnimationControl.BackView>
+
+            <controls:TwoCardsAnimationControl.FrontView>
+                <Image HeightRequest="200" Source="Licence2.png" />
+            </controls:TwoCardsAnimationControl.FrontView>
+        </controls:TwoCardsAnimationControl>
+    </StackLayout>
+</ContentPage>
